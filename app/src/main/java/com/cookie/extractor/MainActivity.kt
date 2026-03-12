@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
         
         btnGetXiaoheihe.setOnClickListener {
-            openWebView("xiaoheihe", "https://api.xiaoheihe.cn")
+            openWebView("xiaoheihe", "https://xiaoheihe.cn")
         }
         
         btnGetAll.setOnClickListener {
