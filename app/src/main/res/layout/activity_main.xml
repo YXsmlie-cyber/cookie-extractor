@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍪 Cookie提取器"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="24dp"/>
+
+        <!-- 抖音部分 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📱 抖音"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_get_douyin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="获取抖音Cookie"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FF0000"/>
+
+                <TextView
+                    android:id="@+id/tv_douyin_cookie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="未获取"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:background="#F5F5F5"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- B站部分 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📺 哔哩哔哩"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_get_bilibili"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="获取B站Cookie"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#00A1D6"/>
+
+                <TextView
+                    android:id="@+id/tv_bilibili_cookie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="未获取"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:background="#F5F5F5"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 小黑盒部分 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 小黑盒"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_get_xiaoheihe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="获取小黑盒Cookie"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#333333"/>
+
+                <TextView
+                    android:id="@+id/tv_xiaoheihe_cookie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="未获取"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:background="#F5F5F5"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 一键获取所有 -->
+        <Button
+            android:id="@+id/btn_get_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚀 一键获取所有Cookie"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#4CAF50"
+            android:textSize="16sp"
+            android:padding="12dp"/>
+
+        <!-- 使用说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="📖 使用说明："
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1. 点击按钮打开对应平台\n2. 登录你的账号\n3. 登录成功后点击\"提取Cookie\"\n4. Cookie会自动保存，点击Cookie可复制\n\n提示：点击Cookie文本可复制到剪贴板"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
