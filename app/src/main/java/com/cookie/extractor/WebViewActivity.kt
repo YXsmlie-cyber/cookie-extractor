@@ -57,11 +57,23 @@ class WebViewActivity : AppCompatActivity() {
             useWideViewPort = true
             loadWithOverviewMode = true
             mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+            // 模拟真实浏览器
+            userAgentString = "Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+            cacheMode = android.webkit.WebSettings.LOAD_DEFAULT
+            blockNetworkImage = false
+            blockNetworkLoads = false
+            allowContentAccess = true
+            allowFileAccess = true
+            setSupportMultipleWindows(false)
         }
         
         // 允许第三方Cookie
         CookieManager.getInstance().setAcceptCookie(true)
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
+        
+        // 设置WebView背景色
+        webView.setBackgroundColor(0xFFFFFFFF.toInt())
+        webView.setBackgroundResource(android.R.color.white)
         
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
